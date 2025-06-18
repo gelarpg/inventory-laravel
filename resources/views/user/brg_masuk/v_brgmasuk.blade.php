@@ -28,7 +28,7 @@
 						<div class="card-header">
 							<div class="d-flex align-items-center">
 								<h4 class="card-title">Tambah Data</h4>
-								@if (auth()->user()->level==2)
+								@if (auth()->user()->level==1)
 								<a class="btn btn-primary btn-round ml-auto" href="/brg_masuk/create">
 									<i class="fa fa-plus"></i>
 									Tambah Data

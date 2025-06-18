@@ -7,7 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BrgMasukController;
 use App\Http\Controllers\BrgKeluarController;
 use App\Http\Controllers\LaporanController;
-
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,20 +60,20 @@ Route::group(['middleware' => 'admin'], function() {
 
      /* Data Barang (Barang Masuk) */
     Route::get('/brg_masuk1', [BrgMasukController::class, 'index'])->name('brg_masuk1');
-    
+
      /* Data Barang (Barang Keluar) */
     Route::get('/brg_keluar1', [BrgKeluarController::class, 'index'])->name('brg_keluar1');
-    
+
 });
 
-Route::group(['middleware' => 'user'], function() {
+Route::group(['middleware' => 'admin'], function() {
     /* Data Barang (Barang Masuk) */
     Route::get('/brg_masuk', [BrgMasukController::class, 'index'])->name('brg_masuk');
     Route::get('/brg_masuk/ajax', [BrgMasukController::class, 'ajax']);
     Route::get('/brg_masuk/create', [BrgMasukController::class, 'create']);
     Route::post('/brg_masuk/store', [BrgMasukController::class, 'store']);
 });
-Route::group(['middleware' => 'teknisi'], function() {
+Route::group(['middleware' => 'admin'], function() {
     /* Data Barang (Barang Keluar) */
     Route::get('/brg_keluar', [BrgKeluarController::class, 'index'])->name('brg_keluar');
     Route::get('/brg_keluar/ajax', [BrgKeluarController::class, 'ajax']);

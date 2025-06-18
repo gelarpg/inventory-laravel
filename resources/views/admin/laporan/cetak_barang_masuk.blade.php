@@ -25,10 +25,10 @@
                     <table style="width: 100%;">
                         <tr>
                             <td align="center">
-                                <h2><img src="{{ URL::to('assets/logo/itn.png') }}" width="80px" height="80px" alt="Logo" style="position:absolute; left: 70px"> <b style="color:red;">Indonesia Trans Network</b>
+                                <h2><img src="{{ URL::to('assets/logo/logo.png') }}" width="80px" height="80px" alt="Logo" style="position:absolute; left: 70px"> <b style="color:red;">Sistem Inventori Barang</b>
                                 </h2>
                                 <span style="line-height: 1.6; font-weight: bold;">
-                                    Jl. Kimaja(Kimaja Icon), samping Jaya Bakery, 10m sebelum fly over Tanjung Senang, Bandar Lampung
+                                    Garut, Jawa Barat
                                 </span>
                             </td>
                         </tr>

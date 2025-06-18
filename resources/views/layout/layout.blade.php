@@ -5,8 +5,8 @@
 	<title>Sistem Inventory</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<link rel="icon" href="/assets/img/itn.png" type="image/x-icon"/>
-	
+	<link rel="icon" href="/assets/img/logo.png" type="image/x-icon"/>
+
 	<!-- Fonts and icons -->
 	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
@@ -33,9 +33,9 @@
 		<div class="main-header" data-background-color="purple">
 			<!-- Logo Header -->
 			<div class="logo-header">
-				
+
 				<a href="#" class="logo">
-					<img src="/assets/img/itn.png" width="100px" height="50px" alt="navbar brand" class="navbar-brand">
+					<img src="/assets/img/logo.png" width="100px" height="50px" alt="navbar brand" class="navbar-brand">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -53,7 +53,7 @@
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg">
-				
+
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -95,13 +95,13 @@
                                         @csrf
 										<button class="btn btn-rounded btn-danger btn-sm"><i class="fa fa-lock"></i> Logout</button>
                                     </form>
-									
-									
-									
+
+
+
 								</li>
 							</ul>
 						</li>
-						
+
 					</ul>
 				</div>
 			</nav>
@@ -109,7 +109,7 @@
 		</div>
 		<!-- Sidebar -->
 		<div class="sidebar">
-			
+
 			<div class="sidebar-wrapper scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
@@ -146,7 +146,6 @@
 							</span>
 							<h4 class="text-section">Components</h4>
 						</li>
-						@if (auth()->user()->level==1)
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#base">
 								<i class="fas fa-layer-group"></i>
@@ -211,23 +210,18 @@
 								<p>Barang Keluar</p>
 							</a>
 						</li> -->
-						@endif
-						@if (auth()->user()->level==2)
 						<li class="nav-item">
 							<a class="collapse show" href="{{route('brg_masuk')}}">
 								<i class="fas fa-briefcase"></i>
 								<p>Barang Masuk</p>
 							</a>
 						</li>
-						@endif
-						@if (auth()->user()->level==3)
 						<li class="nav-item">
 							<a class="collapse show" href="{{route('brg_keluar')}}">
 								<i class="fas fa-briefcase"></i>
 								<p>Barang Keluar</p>
 							</a>
 						</li>
-						@endif
 						<!-- <li class="nav-item active submenu">
 							<a data-toggle="collapse" href="#tables">
 								<i class="fas fa-table"></i>
