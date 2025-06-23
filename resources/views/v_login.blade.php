@@ -17,7 +17,7 @@
 			}
 		});
 	</script>
-	
+
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/css/azzara.min.css">
@@ -25,8 +25,8 @@
 <body class="login">
 	<div class="wrapper wrapper-login">
 		<div class="container container-login animated fadeIn">
-			<h3 class="text-center">Silahkan Login</h3>
-            
+			<h3 class="text-center">Ayo Login</h3>
+
             <form method="POST" action="{{ route('login')}}" enctype="multipart/form-data">
             @csrf
 
@@ -35,7 +35,7 @@
 					<input id="email" name="email" type="text" class="form-control input-border-bottom" required>
 					<label for="email" class="placeholder">Email</label>
 					@error('email')
-                    	<span class="invalid-feedback" role="alert">
+                        <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
